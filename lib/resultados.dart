@@ -37,48 +37,60 @@ class Resultado extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                     ),
                   ),
-                  Text(
-                      '${argumentos.acertos} / 10',
-                      style: GoogleFonts.montserratAlternates(
+                  ElevatedButton(
+                    onPressed: (){},
+                    style: ElevatedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(50),
+                        backgroundColor: Color.fromRGBO(143, 86, 59, 1), // <-- Button color
+                        foregroundColor: Colors.red, // <-- Splash color
+                      ),  
+                    child: Text(
                       
-                        fontSize: 40,
-                        color: Color.fromRGBO(143, 86, 59, 1),
-                        fontWeight: FontWeight.w900,
+                        '${argumentos.acertos} / 10',
+                        style: GoogleFonts.montserratAlternates(
+                        
+                          fontSize: 40,
+                          color: Color.fromRGBO(222, 181, 151, 1.0),
+                          fontWeight: FontWeight.w900,
+                        ),
                       ),
-                    ),   
+                  ),   
                  
                  if (argumentos.acertos == 10)
-                  Text(
-                    'Uau! Você realmente conhece o Nabuco!',
+                  Text( 
+                    'Uau! Você realmente conhece o Nabuco!',  textAlign: TextAlign.center,
                     style: GoogleFonts.montserratAlternates(
                       textStyle: Theme.of(context).textTheme.displayLarge,
                       fontSize: 30,
                       color: Color.fromRGBO(143, 86, 59, 1),
-                      fontWeight: FontWeight.w800,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   
                   if (argumentos.acertos < 6)
                   Align(
-                    alignment: Alignment.topCenter,
+                    
+                    alignment: Alignment.center,
                     child: Text(
-                      '😞\n Você tem muito a aprender com Nabuco ainda',
+                      '😞\n Nabuco está decepcionado com tanta desinformação', textAlign: TextAlign.center,
                       style: GoogleFonts.montserratAlternates(
+                        
                         textStyle: Theme.of(context).textTheme.displayLarge,
                         fontSize: 30,
                         color: Color.fromRGBO(143, 86, 59, 1),
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
-                  if (argumentos.acertos < 10 )
+                  if (argumentos.acertos < 10 && argumentos.acertos >= 6 )
                   Align(
                     alignment: Alignment.topCenter,
                     child: Text(
-                      'Você está no caminho certo! Mas ainda há muito sobre Nabuco para aprender.',
+                      'Você está no caminho certo! Mas ainda há muito sobre Nabuco para aprender.',  textAlign: TextAlign.center,
                       style: GoogleFonts.montserratAlternates(
                         textStyle: Theme.of(context).textTheme.displayLarge,
-                        fontSize: 30,
+                        fontSize: 25,
                         color: Color.fromRGBO(143, 86, 59, 1),
                         fontWeight: FontWeight.w500,
                       ),
@@ -98,7 +110,7 @@ class Resultado extends StatelessWidget {
                         'Jogar novamente',
                         style: GoogleFonts.montserratAlternates(
                           textStyle: Theme.of(context).textTheme.displayLarge,
-                          fontSize: 30,
+                          fontSize: 25,
                           color: Colors.white60,
                           fontWeight: FontWeight.w600,
                         ),

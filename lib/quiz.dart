@@ -63,7 +63,7 @@ void initState() {
           title: Center(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 50, 10, 10),
-              child: Image.asset('assets/NABUCO_grand.png', width: 100),
+              child: Image.asset('assets/nabucogrande.png', width: 100),
             ),
           ),
         ),
@@ -135,7 +135,7 @@ void initState() {
                     child: Padding(
                       padding: const EdgeInsets.all(20),
                       child: Text(
-                        quiz[perguntaNumero - 1]['pergunta'],
+                        quiz[perguntaNumero - 1]['pergunta'], textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
                           fontSize: 25,
                           color: Color.fromRGBO(143, 86, 59, 1),
@@ -161,7 +161,7 @@ void initState() {
                       ),
                       onPressed: () => {respondeu(0)},
                       child: Text(
-                        quiz[perguntaNumero - 1]['respostas'][0],
+                        quiz[perguntaNumero - 1]['respostas'][0], textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
                           textStyle: Theme.of(context).textTheme.displayLarge,
                           fontSize: 25,
@@ -188,7 +188,7 @@ void initState() {
                       ),
                       onPressed: () => {respondeu(1)},
                       child: Text(
-                        quiz[perguntaNumero - 1]['respostas'][1],
+                        quiz[perguntaNumero - 1]['respostas'][1], textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
                           textStyle: Theme.of(context).textTheme.displayLarge,
                           fontSize:  25,
@@ -214,7 +214,7 @@ void initState() {
                       ),
                       onPressed: () => {respondeu(2)},
                       child: Text(
-                        quiz[perguntaNumero - 1]['respostas'][2],
+                        quiz[perguntaNumero - 1]['respostas'][2], textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
                           textStyle: Theme.of(context).textTheme.displayLarge,
                           fontSize:  25,
@@ -240,7 +240,7 @@ void initState() {
                       ),
                       onPressed: () => {respondeu(3)},
                       child: Text(
-                        quiz[perguntaNumero - 1]['respostas'][3],
+                        quiz[perguntaNumero - 1]['respostas'][3], textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
                           textStyle: Theme.of(context).textTheme.displayLarge,
                           fontSize:  25,
@@ -266,7 +266,7 @@ void initState() {
                       ),
                       onPressed: () => {respondeu(4)},
                       child: Text(
-                        quiz[perguntaNumero - 1]['respostas'][4],
+                        quiz[perguntaNumero - 1]['respostas'][4], textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
                           textStyle: Theme.of(context).textTheme.displayLarge,
                           fontSize:  25,
